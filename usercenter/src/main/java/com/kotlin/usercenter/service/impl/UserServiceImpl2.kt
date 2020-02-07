@@ -8,7 +8,7 @@ import rx.Observable
 import rx.functions.Func1
 import javax.inject.Inject
 
-class UserServiceImpl @Inject constructor() : UserService {
+class UserServiceImpl2 @Inject constructor() : UserService {
     @Inject
     lateinit var repository: UserRepository
 

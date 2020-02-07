@@ -3,6 +3,8 @@ package com.kotlin.usercenter.ui.activity
 import android.os.Bundle
 import com.kotlin.base.ui.activity.BaseMvpActivity
 import com.kotlin.usercenter.R
+import com.kotlin.usercenter.injection.component.DaggerUserComponent
+import com.kotlin.usercenter.injection.module.UserModule
 import com.kotlin.usercenter.presenter.RegisterPresenter
 import com.kotlin.usercenter.presenter.view.RegisterView
 import kotlinx.android.synthetic.main.activity_register.*
@@ -18,7 +20,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView {
         setContentView(R.layout.activity_register)
 
         mPresenter = RegisterPresenter()
-        mPresenter.mView = this
+        initInjection()
 
         mRegisterBtn.setOnClickListener {
             mPresenter.register(
@@ -28,5 +30,11 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView {
             )
 
         }
+    }
+
+    private fun initInjection() {
+        DaggerUserComponent.builder().activityComponent(mActivityComponent).userModule(UserModule())
+            .build().inject(this)
+        mPresenter.mView = this
     }
 }

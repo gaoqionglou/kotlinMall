@@ -1,6 +1,6 @@
 package com.kotlin.base.common
 
-class Constant {
+class BaseConstant {
     companion object {
         val SERVER_ADDRESS = ""
     }

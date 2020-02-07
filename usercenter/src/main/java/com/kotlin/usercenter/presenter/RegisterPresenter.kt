@@ -4,14 +4,39 @@ import com.kotlin.base.ext.excute
 import com.kotlin.base.presenter.BasePresenter
 import com.kotlin.base.rx.BaseSubscriber
 import com.kotlin.usercenter.presenter.view.RegisterView
-import com.kotlin.usercenter.service.impl.UserServiceImpl
+import com.kotlin.usercenter.service.UserService
+import javax.inject.Inject
+import javax.inject.Named
 
-class RegisterPresenter : BasePresenter<RegisterView>() {
+class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
+
+    @Inject
+//    @Named("service") //java中可行，kotlin要用下面的方式
+    @field:[Named("service")]
+    lateinit var userService: UserService
+
+    @Inject
+    @field:[Named("service2")]
+    lateinit var userService2: UserService
 
     fun register(mobile: String, verifyCode: String, pwd: String) {
-
-        val userService = UserServiceImpl()
+//        val userService = UserServiceImpl()
         userService.register(mobile, verifyCode, pwd)
+
+            .excute(object : BaseSubscriber<Boolean>() {
+                override fun onNext(t: Boolean) {
+                    mView.onRegisterResult(t)
+                }
+
+
+            })
+
+
+    }
+
+
+    fun register2(mobile: String, verifyCode: String, pwd: String) {
+        userService2.register(mobile, verifyCode, pwd)
 
             .excute(object : BaseSubscriber<Boolean>() {
                 override fun onNext(t: Boolean) {
