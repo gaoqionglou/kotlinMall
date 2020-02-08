@@ -25,26 +25,26 @@ class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
 
             .excute(object : BaseSubscriber<Boolean>() {
                 override fun onNext(t: Boolean) {
-                    mView.onRegisterResult(t)
+                    mView.onRegisterResult(if (t) "注册成功" else "注册失败")
                 }
 
 
-            })
+            }, lifecycleProvider)
 
 
     }
 
-
+    //多个接口实现通过@Named注解区分
     fun register2(mobile: String, verifyCode: String, pwd: String) {
         userService2.register(mobile, verifyCode, pwd)
 
             .excute(object : BaseSubscriber<Boolean>() {
                 override fun onNext(t: Boolean) {
-                    mView.onRegisterResult(t)
+                    mView.onRegisterResult(if (t) "注册成功" else "注册失败")
                 }
 
 
-            })
+            }, lifecycleProvider)
 
 
     }
