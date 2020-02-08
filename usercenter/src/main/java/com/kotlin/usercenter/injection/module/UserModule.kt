@@ -10,14 +10,16 @@ import javax.inject.Named
 @Module
 class UserModule {
 
-    @Provides
+    //注意注解的先后顺序 否则报错
     @Named("service")
+    @Provides
     fun provideUserService(service: UserServiceImpl): UserService {
         return service
     }
 
-    @Provides
+
     @Named("service2")
+    @Provides
     fun provideUserService2(service: UserServiceImpl2): UserService {
         return service
     }

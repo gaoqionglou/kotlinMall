@@ -1,9 +1,9 @@
 package com.kotlin.usercenter.ui.activity
 
 import android.os.Bundle
-import android.view.View
 import com.kotlin.base.ext.onClick
 import com.kotlin.base.ui.activity.BaseMvpActivity
+import com.kotlin.base.widget.VerifyButton
 import com.kotlin.usercenter.R
 import com.kotlin.usercenter.injection.component.DaggerUserComponent
 import com.kotlin.usercenter.injection.module.UserModule
@@ -26,8 +26,6 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        mPresenter = RegisterPresenter()
-
 
         mRegisterBtn.onClick {
             mPresenter.register(
@@ -37,7 +35,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView {
             )
         }
 
-
+/*
         mRegisterBtn.onClick(View.OnClickListener {
             mPresenter.register(
                 mMobileEt.toString().trim(),
@@ -53,6 +51,16 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView {
                 mPwdEt.toString().trim()
             )
 
+        }*/
+
+        mVerifyBtn.setOnVerifyBtnClick(object : VerifyButton.OnVerifyBtnClick {
+            override fun onClick() {
+                toast("send code")
+            }
+
+        })
+        mVerifyBtn.onClick {
+            mVerifyBtn.requestSendVerifyNumber()
         }
     }
 

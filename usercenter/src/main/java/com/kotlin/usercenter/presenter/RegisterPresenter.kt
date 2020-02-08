@@ -1,5 +1,6 @@
 package com.kotlin.usercenter.presenter
 
+
 import com.kotlin.base.ext.excute
 import com.kotlin.base.presenter.BasePresenter
 import com.kotlin.base.rx.BaseSubscriber
@@ -21,9 +22,13 @@ class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
 
     fun register(mobile: String, verifyCode: String, pwd: String) {
 //        val userService = UserServiceImpl()
+        if (!checkNetWork()) {
+            return
+        }
+        mView.showLoading()
         userService.register(mobile, verifyCode, pwd)
 
-            .excute(object : BaseSubscriber<Boolean>() {
+            .excute(object : BaseSubscriber<Boolean>(mView) {
                 override fun onNext(t: Boolean) {
                     mView.onRegisterResult(if (t) "注册成功" else "注册失败")
                 }
@@ -36,9 +41,10 @@ class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
 
     //多个接口实现通过@Named注解区分
     fun register2(mobile: String, verifyCode: String, pwd: String) {
+        mView.showLoading()
         userService2.register(mobile, verifyCode, pwd)
 
-            .excute(object : BaseSubscriber<Boolean>() {
+            .excute(object : BaseSubscriber<Boolean>(mView) {
                 override fun onNext(t: Boolean) {
                     mView.onRegisterResult(if (t) "注册成功" else "注册失败")
                 }

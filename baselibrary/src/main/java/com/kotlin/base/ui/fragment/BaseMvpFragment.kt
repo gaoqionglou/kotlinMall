@@ -2,6 +2,7 @@ package com.kotlin.base.ui.fragment
 
 import android.app.Activity
 import android.os.Bundle
+import android.widget.Toast
 import com.kotlin.base.common.BaseApplication
 import com.kotlin.base.injection.component.ActivityComponent
 import com.kotlin.base.injection.component.DaggerActivityComponent
@@ -20,8 +21,8 @@ abstract class BaseMvpFragment<T : BasePresenter<*>> : BaseFragment(), BaseView 
 
     }
 
-    override fun onError() {
-
+    override fun onError(errorTxt: String) {
+        Toast.makeText(activity, errorTxt, Toast.LENGTH_SHORT).show()
     }
 
     @Inject

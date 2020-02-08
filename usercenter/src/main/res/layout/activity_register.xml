@@ -3,8 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.activity.RegisterActivity">
+
+    <com.kotlin.base.widget.HeaderBar
+        style="@style/MatchWrap"
+        app:isShowBack="false"
+        app:rightText="登录"
+        app:titleText="注册" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +25,8 @@
             android:layout_weight="4"
             android:hint="请输入手机号码" />
 
-        <Button
-
+        <com.kotlin.base.widget.VerifyButton
+            android:id="@+id/mVerifyBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
