@@ -5,6 +5,7 @@ import android.view.View
 import com.kotlin.base.ext.enable
 import com.kotlin.base.ext.onClick
 import com.kotlin.base.ui.activity.BaseMvpActivity
+import com.kotlin.user.utils.UserPrefsUtils
 import com.kotlin.usercenter.R
 import com.kotlin.usercenter.data.protocol.UserInfo
 import com.kotlin.usercenter.injection.component.DaggerUserComponent
@@ -63,5 +64,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
 
     override fun onLoginResult(result: UserInfo) {
         toast("登录成功")
+        UserPrefsUtils.putUserInfo(result)
+        startActivity<LoginActivity>()
     }
 }
