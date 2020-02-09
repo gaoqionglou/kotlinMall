@@ -1,13 +1,13 @@
-if (isUserModule.toBoolean()){
+if (isUserModule.toBoolean()) {
     apply plugin: 'com.android.library'
-}else {
+} else {
     apply plugin: 'com.android.application'
 }
 
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin:'kotlin-kapt'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -36,14 +36,14 @@ android {
 
     sourceSets {
         main {
-            if(isUserModule.toBoolean()){
+            if (isUserModule.toBoolean()) {
 
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
                 //release模式下排除debug文件夹中的java文件
-                java{
+                java {
                     exclude 'debug/**'
                 }
-            }else {
+            } else {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             }
         }

@@ -27,7 +27,6 @@ open class BaseActivity : RxAppCompatActivity() {
         } else {
             AppManager.instance.exitApp(this)
         }
-
     }
 
 }
