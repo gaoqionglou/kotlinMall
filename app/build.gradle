@@ -36,8 +36,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     api project(path: ':provider')
-    implementation project(':messegecenter')
+    implementation project(':MessageCenter')
     if (isUserModule.toBoolean()) {
-        implementation project(path: ':usercenter')
+        implementation project(path: ':UserCenter')
     }
 }
