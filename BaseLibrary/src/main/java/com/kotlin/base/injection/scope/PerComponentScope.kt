@@ -8,4 +8,4 @@ import javax.inject.Scope
 @Scope
 @Documented
 @Retention(RUNTIME)
-annotation class PreComponentScope
+annotation class PerComponentScope

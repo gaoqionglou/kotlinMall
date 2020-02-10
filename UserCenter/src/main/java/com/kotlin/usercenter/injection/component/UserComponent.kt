@@ -1,13 +1,13 @@
 package com.kotlin.usercenter.injection.component
 
 import com.kotlin.base.injection.component.ActivityComponent
-import com.kotlin.base.injection.scope.PreComponentScope
+import com.kotlin.base.injection.scope.PerComponentScope
 import com.kotlin.usercenter.injection.module.UploadModule
 import com.kotlin.usercenter.injection.module.UserModule
 import com.kotlin.usercenter.ui.activity.*
 import dagger.Component
 
-@PreComponentScope
+@PerComponentScope
 @Component(
     dependencies = [ActivityComponent::class],
     modules = [UserModule::class, UploadModule::class]
