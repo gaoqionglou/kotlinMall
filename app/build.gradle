@@ -3,6 +3,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
 
 android {
     compileSdkVersion 29
@@ -41,4 +49,7 @@ dependencies {
     if (isUserModule.toBoolean()) {
         implementation project(path: ':UserCenter')
     }
+
+    //ARouter
+    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
 }

@@ -2,6 +2,7 @@ package com.kotlin.usercenter.ui.activity
 
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.kotlin.base.ext.enable
 import com.kotlin.base.ext.onClick
 import com.kotlin.base.ui.activity.BaseMvpActivity
@@ -17,6 +18,7 @@ import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 
+@Route(path = "/userCenter/login")
 class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClickListener {
 
 
