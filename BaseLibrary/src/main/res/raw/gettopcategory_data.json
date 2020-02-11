@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "categoryName": "手机",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": true
+    },
+    {
+      "id": 2,
+      "categoryName": "数码",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 3,
+      "categoryName": "电脑办公",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 4,
+      "categoryName": "男装",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 5,
+      "categoryName": "女装",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 6,
+      "categoryName": "美妆",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 7,
+      "categoryName": "零食",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 8,
+      "categoryName": "生鲜水果",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 9,
+      "categoryName": "家具",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 10,
+      "categoryName": "汽车",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    },
+    {
+      "id": 11,
+      "categoryName": "家纺",
+      "categoryIcon": "",
+      "parentId": 0,
+      "isSelected": false
+    }
+  ]
+}

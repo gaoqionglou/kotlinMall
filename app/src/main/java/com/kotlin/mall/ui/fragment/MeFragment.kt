@@ -10,6 +10,7 @@ import com.kotlin.base.ext.onClick
 import com.kotlin.base.ui.fragment.BaseFragment
 import com.kotlin.base.utils.AppPrefsUtils
 import com.kotlin.mall.R
+import com.kotlin.mall.ui.activity.SettingActivity
 import com.kotlin.provider.common.ProviderConstant
 import com.kotlin.provider.common.isLogined
 import com.kotlin.usercenter.ui.activity.LoginActivity
@@ -28,6 +29,10 @@ class MeFragment : BaseFragment(), View.OnClickListener {
                 }
             }
 
+            mSettingTv.id -> {
+                startActivity(Intent(activity, SettingActivity::class.java))
+            }
+
         }
     }
 
@@ -44,6 +49,7 @@ class MeFragment : BaseFragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         mUserNameTv.onClick(this)
         mUserIconIv.onClick(this)
+        mSettingTv.onClick(this)
     }
 
     /**
@@ -57,7 +63,7 @@ class MeFragment : BaseFragment(), View.OnClickListener {
     private fun loadData() {
         if (!isLogined()) {
             //非登录
-            mUserIconIv.setBackgroundResource(R.drawable.icon_default_user)
+            mUserIconIv.setImageResource(R.drawable.icon_default_user)
             mUserNameTv.setText(R.string.un_login_text)
         } else {
             //已登录

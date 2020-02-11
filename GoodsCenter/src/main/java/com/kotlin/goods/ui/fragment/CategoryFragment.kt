@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kennyc.view.MultiStateView
 import com.kotlin.base.ext.startLoading
 import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
 import com.kotlin.base.ui.fragment.BaseMvpFragment
@@ -45,7 +46,7 @@ class CategoryFragment : BaseMvpFragment<CategoryPresenter>(), CategoryView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        loadData()
+        loadData(0)
     }
 
     /*
@@ -97,6 +98,7 @@ class CategoryFragment : BaseMvpFragment<CategoryPresenter>(), CategoryView {
                 mPresenter.getCategory(it[0].id)
             } else {
                 mSecondCategoryAdapter.setData(result)
+                mMultiStateView.viewState = MultiStateView.VIEW_STATE_CONTENT
             }
         }
     }

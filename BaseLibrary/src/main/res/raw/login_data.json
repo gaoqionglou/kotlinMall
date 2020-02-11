@@ -1,0 +1,12 @@
+{
+  "status": 0,
+  "message": "登陆成功",
+  "data": {
+    "id": "1",
+    "userIcon": "https://pics.javcdn.pw/actress/300_a.jpg",
+    "userName": "ゆりあ",
+    "userGender": "女",
+    "userMobile": "78-61458121",
+    "userSign": "AI-0001"
+  }
+}

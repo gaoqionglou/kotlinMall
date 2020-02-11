@@ -11,8 +11,13 @@ import javax.inject.Inject
 class CategoryRepository @Inject constructor() {
 
 
-    fun getCategory(parentId: Int): Observable<BaseResp<MutableList<Category>?>> {
+    fun getTopCategory(parentId: Int): Observable<BaseResp<MutableList<Category>?>> {
         return RetrofitFactory.instance.create(CategoryApi::class.java)
-            .getCategory(GetCategoryReq(parentId))
+            .getTopCategory(GetCategoryReq(parentId))
+    }
+
+    fun getSecondaryCategory(parentId: Int): Observable<BaseResp<MutableList<Category>?>> {
+        return RetrofitFactory.instance.create(CategoryApi::class.java)
+            .getSecondaryCategory(GetCategoryReq(parentId))
     }
 }

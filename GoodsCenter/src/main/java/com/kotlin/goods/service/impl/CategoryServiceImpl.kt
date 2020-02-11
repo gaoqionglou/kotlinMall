@@ -17,9 +17,13 @@ class CategoryServiceImpl @Inject constructor() : CategoryService {
     /*
         获取商品分类列表
      */
-    override fun getCategory(parentId: Int): Observable<MutableList<Category>?> {
-        return repository.getCategory(parentId).convert()
+    override fun getTopCategory(parentId: Int): Observable<MutableList<Category>?> {
+        return repository.getTopCategory(parentId).convert()
     }
 
+
+    override fun getSecondaryCategory(parentId: Int): Observable<MutableList<Category>?> {
+        return repository.getSecondaryCategory(parentId).convert()
+    }
 
 }

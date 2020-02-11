@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "categoryName": "小米",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i3/TB1GCNRgYj1gK0jSZFOPLQ7GpXa_105156.jpg",
+      "parentId": 1,
+      "isSelected": true
+    },
+    {
+      "id": 2,
+      "categoryName": "华为",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i4/TB14kUhhiLaK1RjSZFxlECmPFXa_100611.jpg",
+      "parentId": 2,
+      "isSelected": false
+    },
+    {
+      "id": 3,
+      "categoryName": "Apple",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i1/2206774295362/O1CN01ClbB1u1pTqH8ZzyPs_!!2206774295362-0-scmitem40000.jpg",
+      "parentId": 3,
+      "isSelected": false
+    },
+    {
+      "id": 4,
+      "categoryName": "三星",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i3/370627083/O1CN01z8v93w22C3tmyQpRm_!!370627083.jpg",
+      "parentId": 4,
+      "isSelected": false
+    },
+    {
+      "id": 5,
+      "categoryName": "荣耀",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i7/TB1tod5e7P2gK0jSZPxNuqcQpXa_104439.jpg",
+      "parentId": 5,
+      "isSelected": false
+    },
+    {
+      "id": 6,
+      "categoryName": "VIVO",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i5/TB1Jwyxebus3KVjSZKbpg0qkFXa_122546.jpg",
+      "parentId": 6,
+      "isSelected": false
+    },
+    {
+      "id": 7,
+      "categoryName": "OPPO",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i6/TB1Q.yXGCzqK1RjSZPxku.4tVXa_070420.jpg",
+      "parentId": 7,
+      "isSelected": false
+    },
+    {
+      "id": 8,
+      "categoryName": "魅族",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i7/TB1XaV8bSzqK1RjSZPcCzbTepXa_113444.jpg",
+      "parentId": 8,
+      "isSelected": false
+    },
+    {
+      "id": 9,
+      "categoryName": "中兴",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i1/2765414748/O1CN01BNwOos1kwd2VDr9GF_!!2765414748.jpg",
+      "parentId": 9,
+      "isSelected": false
+    },
+    {
+      "id": 10,
+      "categoryName": "联想",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i5/TB1q6NAhborBKNjSZFjwoZ_SpXa_044420.jpg",
+      "parentId": 10,
+      "isSelected": false
+    },
+    {
+      "id": 11,
+      "categoryName": "索尼",
+      "categoryIcon": "https://img.alicdn.com/bao/uploaded/i3/2528566607/O1CN01pWIOJi1yg3IyqZuG8_!!2528566607.jpg",
+      "parentId": 11,
+      "isSelected": false
+    }
+  ]
+}

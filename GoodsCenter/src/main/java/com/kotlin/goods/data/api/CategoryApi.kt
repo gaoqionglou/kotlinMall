@@ -13,6 +13,12 @@ interface CategoryApi {
     /*
         获取商品分类列表
      */
-    @POST("category/getCategory")
-    fun getCategory(@Body req: GetCategoryReq): Observable<BaseResp<MutableList<Category>?>>
+    @POST("category/getTopCategory")
+    fun getTopCategory(@Body req: GetCategoryReq): Observable<BaseResp<MutableList<Category>?>>
+
+    /*
+    获取商品分类列表
+ */
+    @POST("category/getSecondaryCategory")
+    fun getSecondaryCategory(@Body req: GetCategoryReq): Observable<BaseResp<MutableList<Category>?>>
 }

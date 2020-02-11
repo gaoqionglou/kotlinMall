@@ -25,12 +25,23 @@ class CategoryPresenter @Inject constructor() : BasePresenter<CategoryView>() {
             return
         }
         mView.showLoading()
-        categoryService.getCategory(parentId)
-            .execute(object : BaseSubscriber<MutableList<Category>?>(mView) {
-                override fun onNext(t: MutableList<Category>?) {
-                    mView.onGetCategoryResult(t)
-                }
-            }, lifecycleProvider)
+
+        if (parentId == 0) {
+            categoryService.getTopCategory(parentId)
+                .execute(object : BaseSubscriber<MutableList<Category>?>(mView) {
+                    override fun onNext(t: MutableList<Category>?) {
+                        mView.onGetCategoryResult(t)
+                    }
+                }, lifecycleProvider)
+        } else {
+            categoryService.getSecondaryCategory(parentId)
+                .execute(object : BaseSubscriber<MutableList<Category>?>(mView) {
+                    override fun onNext(t: MutableList<Category>?) {
+                        mView.onGetCategoryResult(t)
+                    }
+                }, lifecycleProvider)
+        }
+
 
     }
 
