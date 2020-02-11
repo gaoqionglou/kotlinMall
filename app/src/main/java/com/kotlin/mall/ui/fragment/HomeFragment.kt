@@ -1,13 +1,17 @@
 package com.kotlin.mall.ui.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kotlin.base.ext.onClick
 import com.kotlin.base.ui.fragment.BaseFragment
 import com.kotlin.base.widget.BannerImageLoader
+import com.kotlin.goods.ui.activity.SearchGoodsActivity
 import com.kotlin.mall.R
 import com.kotlin.mall.common.*
 import com.kotlin.mall.ui.adapter.HomeDiscountAdapter
@@ -32,10 +36,22 @@ class HomeFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //必须在onViewCreated 视图完成创建之后才能直接使用xml id
+        initView()
         initBanner()
         initNews()
         initDiscount()
         initTopic()
+    }
+
+
+    private fun initView() {
+        mSearchEt.onClick {
+            startActivity(Intent(activity, SearchGoodsActivity::class.java))
+        }
+
+        mScanIv.onClick {
+            Toast.makeText(activity, R.string.coming_soon_tip, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun initBanner() {
