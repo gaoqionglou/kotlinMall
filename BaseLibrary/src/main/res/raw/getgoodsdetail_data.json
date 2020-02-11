@@ -1,0 +1,44 @@
+{
+  "data": {
+    "id": 1,
+    "categoryId": null,
+    "goodsDesc": "华为旗下HONOR/荣耀笔记本 MagicBook 15 锐龙R5 3500U 15.6英寸笔记本电脑轻薄便携本学生",
+    "goodsDefaultIcon": "https://img.alicdn.com/bao/uploaded/i6/TB1dmiUoeH2gK0jSZJn_dqT1FXa_024819.jpg",
+    "goodsDefaultPrice": 100,
+    "goodsDetailOne": null,
+    "goodsDetailTwo": null,
+    "goodsSalesCount": 10000,
+    "goodsStockCount": 20000,
+    "goodsCode": "AI41237920",
+    "goodsDefaultSku": "intel-i5,4G,GT 1060,1件",
+    "goodsBanner": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png,https://img.alicdn.com/bao/uploaded/i4/1917047079/O1CN01ZOvXbM22AEHQi0LLo_!!1917047079.jpg,https://img.alicdn.com/bao/uploaded/i2/TB1G2UZoSf2gK0jSZFPBM8sopXa_121455.jpg",
+    "goodsSku": [
+      {
+        "id": 1,
+        "skuTitle": "CPU",
+        "skuContent": [
+          "intel-i5",
+          "intel-i7"
+        ]
+      },
+      {
+        "id": 2,
+        "skuTitle": "内存",
+        "skuContent": [
+          "4G",
+          "8G",
+          "12G"
+        ]
+      },
+      {
+        "id": 3,
+        "skuTitle": "显卡",
+        "skuContent": [
+          "GT 1060",
+          "GT 1080"
+        ]
+      }
+    ],
+    "maxPage": 5
+  }
+}

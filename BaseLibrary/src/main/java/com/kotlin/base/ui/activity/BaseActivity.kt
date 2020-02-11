@@ -1,8 +1,11 @@
 package com.kotlin.base.ui.activity
 
 import android.os.Bundle
+import android.view.View
+import android.widget.FrameLayout
 import com.kotlin.base.common.AppManager
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity
+import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 
 open class BaseActivity : RxAppCompatActivity() {
@@ -28,5 +31,11 @@ open class BaseActivity : RxAppCompatActivity() {
             AppManager.instance.exitApp(this)
         }
     }
+
+    val contentView: View
+        get() {
+            val content = find<FrameLayout>(android.R.id.content)
+            return content.getChildAt(0)
+        }
 
 }

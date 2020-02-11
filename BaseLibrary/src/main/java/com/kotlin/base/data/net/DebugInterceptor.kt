@@ -47,6 +47,8 @@ class DebugInterceptor(
         var getGoodsListByKeyword_url: String = apphost + "goods/getGoodsListByKeyword"
         val getGoodsListByKeyword_data: Int = R.raw.getgoodslistbykeyword_data
 
+        var getGoodsDetail_url: String = apphost + "goods/getGoodsDetail"
+        val getGoodsDetail_data: Int = R.raw.getgoodsdetail_data
 
         val debugMap =
             mapOf(
@@ -55,7 +57,8 @@ class DebugInterceptor(
                 editUser_url to editUser_data, getTopCategory_url to getTopCategory_data,
                 getSecondaryCategory_url to getSecondaryCategory_data,
                 getGoodsList_url to getGoodsList_data,
-                getGoodsListByKeyword_url to getGoodsListByKeyword_data
+                getGoodsListByKeyword_url to getGoodsListByKeyword_data,
+                getGoodsDetail_url to getGoodsDetail_data
             )
 
 
