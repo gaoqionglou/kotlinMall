@@ -12,7 +12,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -28,7 +28,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -44,7 +44,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -60,7 +60,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060"
     },
@@ -75,7 +75,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -91,7 +91,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -107,7 +107,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -123,7 +123,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -139,7 +139,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
@@ -155,7 +155,7 @@
       "goodsSalesCount": 10000,
       "goodsStockCount": 20000,
       "goodsCode": null,
-      "goodsDefaultSku": null,
+      "isSelected": false,
       "goodsBanner": null,
       "goodsSku": "intel-i5,4G,GT 1060",
       "goodsCount": 1
