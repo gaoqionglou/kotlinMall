@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
+import android.widget.Toast
 import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
 import com.kotlin.base.ext.onClick
@@ -18,7 +19,9 @@ import com.kotlin.base.widget.BannerImageLoader
 import com.kotlin.goods.R
 import com.kotlin.goods.common.GoodsConstant
 import com.kotlin.goods.data.protocol.Goods
+import com.kotlin.goods.event.AddCartEvent
 import com.kotlin.goods.event.SkuChangedEvent
+import com.kotlin.goods.event.UpdateCartSizeEvent
 import com.kotlin.goods.injection.component.DaggerGoodsComponent
 import com.kotlin.goods.injection.module.GoodsModule
 import com.kotlin.goods.presenter.GoodsDetailPresenter
@@ -35,6 +38,7 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
     private lateinit var mAnimationStart: Animation
     //SKU弹层退场动画
     private lateinit var mAnimationEnd: Animation
+    private var mCurGoods: Goods? = null
 
     override fun initComponent() {
         DaggerGoodsComponent.builder().activityComponent(mActivityComponent)
@@ -99,6 +103,8 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
 
     override fun onGetGoodsDetailResult(result: Goods) {
 
+        mCurGoods = result
+
         mGoodsDetailBanner.setImages(result.goodsBanner.split(","))
         mGoodsDetailBanner.start()
 
@@ -123,6 +129,11 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
                 mSkuSelectedTv.text =
                     mSkuPop.getSelectSku() + GoodsConstant.SKU_SEPARATOR + mSkuPop.getSelectCount() + "件"
             }.registerInBus(this)
+
+        Bus.observe<AddCartEvent>()
+            .subscribe {
+                addCart()
+            }.registerInBus(this)
     }
 
 
@@ -144,7 +155,8 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
     }
 
     override fun onAddCartResult(result: Int) {
-
+        Bus.send(UpdateCartSizeEvent())
+        Toast.makeText(activity, "添加购物车成功", Toast.LENGTH_SHORT).show()
     }
 
 
@@ -152,4 +164,20 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
         super.onDestroy()
         Bus.unregister(this)
     }
+
+
+    fun addCart() {
+        mCurGoods?.let {
+            mPresenter.addCart(
+                it.id,
+                it.goodsDesc,
+                it.goodsDefaultIcon,
+                it.goodsDefaultPrice,
+                mSkuPop.getSelectCount(),
+                mSkuPop.getSelectSku()
+            )
+        }
+
+    }
 }
+

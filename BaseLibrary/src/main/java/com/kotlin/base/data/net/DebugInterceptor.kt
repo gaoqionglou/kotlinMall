@@ -50,6 +50,9 @@ class DebugInterceptor(
         var getGoodsDetail_url: String = apphost + "goods/getGoodsDetail"
         val getGoodsDetail_data: Int = R.raw.getgoodsdetail_data
 
+        var cartAdd_url: String = apphost + "cart/add"
+        val cartAdd_data: Int = R.raw.cartadd_data
+
         val debugMap =
             mapOf(
                 login_url to login_data, register_url to register_data,
@@ -58,7 +61,8 @@ class DebugInterceptor(
                 getSecondaryCategory_url to getSecondaryCategory_data,
                 getGoodsList_url to getGoodsList_data,
                 getGoodsListByKeyword_url to getGoodsListByKeyword_data,
-                getGoodsDetail_url to getGoodsDetail_data
+                getGoodsDetail_url to getGoodsDetail_data,
+                cartAdd_url to cartAdd_data
             )
 
 

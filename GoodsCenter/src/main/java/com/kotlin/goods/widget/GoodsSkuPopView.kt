@@ -141,6 +141,7 @@ class GoodsSkuPopView(context: Activity) : PopupWindow(context), View.OnClickLis
         when (v.id) {
             R.id.mCloseIv -> dismiss()
             R.id.mAddCartBtn -> {
+
                 dismiss()
             }
         }

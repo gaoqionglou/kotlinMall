@@ -45,9 +45,9 @@ class BottomNavBar @JvmOverloads constructor(
             .setInActiveColorResource(R.color.text_normal)
 
         mCartBadge = TextBadgeItem()
-        mCartBadge.setText("10")
-        cartItem.setBadgeItem(mCartBadge)
 
+        cartItem.setBadgeItem(mCartBadge)
+        mCartBadge.hide()
         //消息
         val msgItem = BottomNavigationItem(
             R.drawable.btn_nav_msg_press,
@@ -60,6 +60,7 @@ class BottomNavBar @JvmOverloads constructor(
         mMsgBadge = ShapeBadgeItem()
         mMsgBadge.setShape(ShapeBadgeItem.SHAPE_OVAL)
         msgItem.setBadgeItem(mMsgBadge)
+        mMsgBadge.hide()
         //我的
         val userItem = BottomNavigationItem(
             R.drawable.btn_nav_user_press,
