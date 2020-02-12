@@ -53,16 +53,33 @@ class DebugInterceptor(
         var cartAdd_url: String = apphost + "cart/add"
         val cartAdd_data: Int = R.raw.cartadd_data
 
+
+        var cartgetList_url: String = apphost + "cart/getList"
+        val cartgetList_data: Int = R.raw.cartgetlist_data
+
+
+        var cartdelete_url: String = apphost + "cart/delete"
+        val cartdelete_data: Int = R.raw.cartdelete_data
+
+
+        var cartsubmit_url: String = apphost + "cart/submit"
+        val cartsubmit_data: Int = R.raw.cartsubmit_data
         val debugMap =
             mapOf(
-                login_url to login_data, register_url to register_data,
-                forgetPwd_url to forgetPwd_data, resetPwd_url to resetPwd_data,
-                editUser_url to editUser_data, getTopCategory_url to getTopCategory_data,
+                login_url to login_data,
+                register_url to register_data,
+                forgetPwd_url to forgetPwd_data,
+                resetPwd_url to resetPwd_data,
+                editUser_url to editUser_data,
+                getTopCategory_url to getTopCategory_data,
                 getSecondaryCategory_url to getSecondaryCategory_data,
                 getGoodsList_url to getGoodsList_data,
                 getGoodsListByKeyword_url to getGoodsListByKeyword_data,
                 getGoodsDetail_url to getGoodsDetail_data,
-                cartAdd_url to cartAdd_data
+                cartAdd_url to cartAdd_data,
+                cartgetList_url to cartgetList_data,
+                cartdelete_url to cartdelete_data,
+                cartsubmit_url to cartsubmit_data
             )
 
 

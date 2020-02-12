@@ -46,7 +46,7 @@ class CartRepository @Inject constructor() {
         提交购物车商品
      */
 
-    fun submitCart(list: MutableList<CartGoods>, totalPrice: Long): Observable<BaseResp<Int>> {
+    fun submitCart(list: MutableList<CartGoods>, totalPrice: Long): Observable<BaseResp<String>> {
         return RetrofitFactory.instance.create(CartApi::class.java)
             .submitCart(SubmitCartReq(list, totalPrice))
 

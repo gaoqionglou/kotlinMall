@@ -7,4 +7,8 @@ interface CartView : BaseView {
 
     fun onGetCartList(result: MutableList<CartGoods>?)
 
+    fun onDeleteCartResult(result: Boolean)
+
+    fun onSubmitCartListResult(result: String)
+
 }

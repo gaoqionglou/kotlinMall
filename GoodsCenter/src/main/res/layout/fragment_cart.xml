@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/MatchMatch.Common">
 
-    <com.kotlin.base.widgets.HeaderBar
+    <com.kotlin.base.widget.HeaderBar
         android:id="@+id/mHeaderBar"
         style="@style/MatchWrap"
         app:isShowBack="false"
@@ -17,7 +17,7 @@
 
         <RelativeLayout style="@style/MatchWrap">
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mCartGoodsRv"
                 style="@style/commonRecyclerView"
                 android:layout_above="@+id/mBottomView" />

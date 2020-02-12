@@ -9,6 +9,7 @@ import com.eightbitlab.rxbus.registerInBus
 import com.kotlin.base.utils.AppPrefsUtils
 import com.kotlin.goods.common.GoodsConstant
 import com.kotlin.goods.event.UpdateCartSizeEvent
+import com.kotlin.goods.ui.fragment.CartFragment
 import com.kotlin.goods.ui.fragment.CategoryFragment
 import com.kotlin.mall.R
 import com.kotlin.mall.ui.fragment.HomeFragment
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private val mStack = Stack<Fragment>()
     private val mHomeFragment by lazy { HomeFragment() }
     private val mCategoryFragment by lazy { CategoryFragment() }
-    private val mCartFragment by lazy { HomeFragment() }
+    private val mCartFragment by lazy { CartFragment() }
     private val mMsgFragment by lazy { HomeFragment() }
     private val mMeFragment by lazy { MeFragment() }
 
