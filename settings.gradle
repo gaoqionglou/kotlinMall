@@ -1,2 +1,2 @@
-include ':app', ':BaseLibrary', ':provider', ':UserCenter', ':MessageCenter', ':GoodsCenter'
+include ':app', ':BaseLibrary', ':provider', ':UserCenter', ':MessageCenter', ':GoodsCenter', ':OrderCenter'
 rootProject.name='KotlinMall'
