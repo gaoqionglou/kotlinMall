@@ -3,11 +3,12 @@
     package="com.kotlin.goods">
 
     <application>
-        <activity android:name=".ui.activity.GoodsActivity"></activity>
-        <activity android:name=".ui.activity.SearchGoodsActivity"></activity>
+        <activity android:name=".ui.activity.CartActivity"></activity>
+        <activity android:name=".ui.activity.GoodsActivity" />
+        <activity android:name=".ui.activity.SearchGoodsActivity" />
         <activity
             android:name=".ui.activity.GoodsDetailActivity"
-            android:theme="@style/AppTheme.Black"></activity>
+            android:theme="@style/AppTheme.Black" />
     </application>
 
 </manifest>

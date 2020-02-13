@@ -178,4 +178,8 @@ class CartFragment : BaseMvpFragment<CartPresenter>(), CartView {
     override fun onSubmitCartListResult(result: String) {
         Toast.makeText(activity, "单号：${result}", Toast.LENGTH_SHORT).show()
     }
+
+    fun setBackVisible(isVisible: Boolean) {
+        mHeaderBar.getLeftView()?.setVisible(isVisible)
+    }
 }

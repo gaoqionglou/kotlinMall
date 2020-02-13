@@ -1,5 +1,6 @@
 package com.kotlin.goods.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
@@ -47,6 +48,9 @@ class GoodsDetailActivity : BaseActivity() {
             afterLogin {
                 Bus.send(AddCartEvent())
             }
+        }
+        mEnterCartTv.onClick {
+            startActivity(Intent(this, CartActivity::class.java))
         }
     }
 
