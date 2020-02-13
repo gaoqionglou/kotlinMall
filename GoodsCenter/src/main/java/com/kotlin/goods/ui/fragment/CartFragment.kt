@@ -143,6 +143,7 @@ class CartFragment : BaseMvpFragment<CartPresenter>(), CartView {
         if (result != null && result.size > 0) {
             mMultiStateView.viewState = MultiStateView.VIEW_STATE_CONTENT
             cartGoodsAdapter.setData(result)
+            mAllCheckedCb.isChecked = false
             mHeaderBar.getRightTextView()?.setVisible(true)
         } else {
             mHeaderBar.getRightTextView()?.setVisible(false)
