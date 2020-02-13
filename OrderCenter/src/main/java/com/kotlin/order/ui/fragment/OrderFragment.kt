@@ -1,6 +1,7 @@
 package com.kotlin.order.ui.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import com.bigkoo.alertview.AlertView
 import com.bigkoo.alertview.OnItemClickListener
 import com.kennyc.view.MultiStateView
 import com.kotlin.base.ext.startLoading
+import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
 import com.kotlin.base.ui.fragment.BaseMvpFragment
 import com.kotlin.order.R
 import com.kotlin.order.common.OrderConstant
@@ -18,7 +20,9 @@ import com.kotlin.order.data.protocol.Order
 import com.kotlin.order.injection.component.DaggerOrderComponent
 import com.kotlin.order.presenter.OrderListPresenter
 import com.kotlin.order.presenter.view.OrderListView
+import com.kotlin.order.ui.activity.OrderDetailActivity
 import com.kotlin.order.ui.adapter.OrderAdapter
+import com.kotlin.provider.common.ProviderConstant
 import kotlinx.android.synthetic.main.fragment_order.*
 
 class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
@@ -77,6 +81,14 @@ class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
             }
 
         }
+        mAdapter.setOnItemClickListener(object :
+            BaseRecyclerViewAdapter.OnItemClickListener<Order> {
+            override fun onItemClick(item: Order, position: Int) {
+                val intent = Intent(activity, OrderDetailActivity::class.java)
+                intent.putExtra(ProviderConstant.KEY_ORDER_ID, item.id)
+                startActivity(intent)
+            }
+        })
     }
 
     private fun loadData() {

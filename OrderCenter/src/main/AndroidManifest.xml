@@ -3,7 +3,8 @@
     package="com.kotlin.order">
 
     <application>
-        <activity android:name=".ui.activity.OrderActivity"></activity>
+        <activity android:name=".ui.activity.OrderDetailActivity"></activity>
+        <activity android:name=".ui.activity.OrderActivity" />
         <activity android:name=".ui.activity.ShipAddressEditActivity" />
         <activity android:name=".ui.activity.ShipAddressActivity" />
         <activity android:name=".ui.activity.OrderConfirmActivity" />
