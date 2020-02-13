@@ -1,0 +1,318 @@
+{
+  "status": 0,
+  "message": "成功",
+  "data": [
+    {
+      "id": 1,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 1,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 1,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        },
+        {
+          "id": 2,
+          "categoryId": null,
+          "goodsDesc": "ROG/玩家国度 魔霸 魔霸3 NVIDIA GTX 1660 Ti 英特尔 酷睿 i7-9750H 15.6英寸",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2745641605/O1CN01C64SDT1Nj8CnRB6bA_!!2745641605.jpg",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 2,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 2,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        },
+        {
+          "id": 2,
+          "categoryId": null,
+          "goodsDesc": "ROG/玩家国度 魔霸 魔霸3 NVIDIA GTX 1660 Ti 英特尔 酷睿 i7-9750H 15.6英寸",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2745641605/O1CN01C64SDT1Nj8CnRB6bA_!!2745641605.jpg",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 3,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 3,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        },
+        {
+          "id": 2,
+          "categoryId": null,
+          "goodsDesc": "ROG/玩家国度 魔霸 魔霸3 NVIDIA GTX 1660 Ti 英特尔 酷睿 i7-9750H 15.6英寸",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2745641605/O1CN01C64SDT1Nj8CnRB6bA_!!2745641605.jpg",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 1
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 4,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "payType": -1,
+      "shipAddress": {
+        "id": 1,
+        "shipUserName": "未央",
+        "shipUserMobile": "178453345",
+        "shipAddress": " 湖南省长沙市岳麓区，辰泰科技园A栋",
+        "shipIsDefault": 0
+      },
+      "totalPrice": 800,
+      "orderStatus": 4,
+      "orderGoodsList": [
+        {
+          "id": 1,
+          "categoryId": null,
+          "goodsDesc": "Huawei/华为 MateBook X Pro MACHR-W29L 13.9英寸 512GB 英特尔酷睿i5 3K全面屏指纹识别",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2838892713/O1CN01KOVMMf1Vub5HSlOLD_!!2838892713.png",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 2
+        },
+        {
+          "id": 2,
+          "categoryId": null,
+          "goodsDesc": "ROG/玩家国度 魔霸 魔霸3 NVIDIA GTX 1660 Ti 英特尔 酷睿 i7-9750H 15.6英寸",
+          "goodsIcon": "https://img.alicdn.com/bao/uploaded/i2/2745641605/O1CN01C64SDT1Nj8CnRB6bA_!!2745641605.jpg",
+          "goodsPrice": 100,
+          "goodsDetailOne": null,
+          "goodsDetailTwo": null,
+          "goodsSalesCount": 10000,
+          "goodsStockCount": 20000,
+          "goodsCode": null,
+          "isSelected": false,
+          "goodsBanner": null,
+          "goodsSku": "intel-i5,4G,GT 1060",
+          "goodsCount": 1
+        }
+      ]
+    }
+  ]
+}

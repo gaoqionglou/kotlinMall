@@ -1,0 +1,27 @@
+{
+  "status": 0,
+  "message": "成功",
+  "data": [
+    {
+      "id": 1,
+      "shipUserName": "Aurec",
+      "shipUserMobile": "078-45864654",
+      "shipAddress": "湖南省长沙市岳麓区，辰泰科技园A栋",
+      "shipIsDefault": 0
+    },
+    {
+      "id": 2,
+      "shipUserName": "Burec",
+      "shipUserMobile": "078-45864654",
+      "shipAddress": "湖南省长沙市岳麓区，辰泰科技园B栋",
+      "shipIsDefault": 1
+    },
+    {
+      "id": 3,
+      "shipUserName": "Cure",
+      "shipUserMobile": "078-45864654",
+      "shipAddress": "湖南省长沙市岳麓区，辰泰科技园C栋",
+      "shipIsDefault": 1
+    }
+  ]
+}

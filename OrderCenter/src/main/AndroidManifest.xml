@@ -1,1 +1,12 @@
-<manifest package="com.kotlin.order" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kotlin.order">
+
+    <application>
+        <activity android:name=".ui.activity.OrderActivity"></activity>
+        <activity android:name=".ui.activity.ShipAddressEditActivity" />
+        <activity android:name=".ui.activity.ShipAddressActivity" />
+        <activity android:name=".ui.activity.OrderConfirmActivity" />
+    </application>
+
+</manifest>

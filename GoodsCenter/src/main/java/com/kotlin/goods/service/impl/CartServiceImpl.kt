@@ -25,7 +25,7 @@ class CartServiceImpl @Inject constructor() : CartService {
     /*
             提交购物车商品
          */
-    override fun submitCart(list: MutableList<CartGoods>, totalPrice: Long): Observable<String> {
+    override fun submitCart(list: MutableList<CartGoods>, totalPrice: Long): Observable<Int> {
         return repository.submitCart(list, totalPrice).convert()
     }
 

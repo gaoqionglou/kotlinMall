@@ -3,6 +3,7 @@ package com.kotlin.base.ui.activity
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
+import com.alibaba.android.arouter.launcher.ARouter
 import com.kotlin.base.common.AppManager
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity
 import org.jetbrains.anko.find
@@ -15,6 +16,7 @@ open class BaseActivity : RxAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppManager.instance.addActivity(this)
+        ARouter.getInstance().inject(this)
     }
 
     override fun onDestroy() {

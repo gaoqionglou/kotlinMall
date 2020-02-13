@@ -64,6 +64,36 @@ class DebugInterceptor(
 
         var cartsubmit_url: String = apphost + "cart/submit"
         val cartsubmit_data: Int = R.raw.cartsubmit_data
+
+        var shipaddressadd_url: String = apphost + "shipAddress/add"
+        val shipaddressadd_data: Int = R.raw.shipaddressadd_data
+
+        var shipaddressdelete_url: String = apphost + "shipAddress/delete"
+        val shipaddressdelete_data: Int = R.raw.shipaddressdelete_data
+
+        var shipaddressmodify_url: String = apphost + "shipAddress/modify"
+        val shipaddressmodify_data: Int = R.raw.shipaddressmodify_data
+
+        var ordergetorderbyid_url: String = apphost + "order/getOrderById"
+        val ordergetorderbyid_data: Int = R.raw.getorderbyid_data
+
+        var shipaddressgetlist_url: String = apphost + "shipAddress/getList"
+        val shipaddressgetlist_data: Int = R.raw.shipaddressgetlist_data
+
+
+        var ordersubmitorder_url: String = apphost + "order/submitOrder"
+        val ordersubmitorder_data: Int = R.raw.ordersubmitorder_data
+
+
+        var ordergetorderlist_url: String = apphost + "order/getOrderList"
+        val ordergetorderlist_data: Int = R.raw.ordergetorderlist_data
+
+        var ordercancel_url: String = apphost + "order/cancel"
+        val ordercancel_data: Int = R.raw.ordercancel_data
+
+        var orderconfirm_url: String = apphost + "order/confirm"
+        val orderconfirm_data: Int = R.raw.orderconfirm_data
+
         val debugMap =
             mapOf(
                 login_url to login_data,
@@ -79,7 +109,16 @@ class DebugInterceptor(
                 cartAdd_url to cartAdd_data,
                 cartgetList_url to cartgetList_data,
                 cartdelete_url to cartdelete_data,
-                cartsubmit_url to cartsubmit_data
+                cartsubmit_url to cartsubmit_data, shipaddressadd_url to shipaddressadd_data,
+                shipaddressdelete_url to shipaddressdelete_data,
+                shipaddressmodify_url to shipaddressmodify_data,
+                ordergetorderbyid_url to ordergetorderbyid_data,
+                shipaddressgetlist_url to shipaddressgetlist_data,
+                ordersubmitorder_url to ordersubmitorder_data,
+                ordergetorderlist_url to ordergetorderlist_data,
+                ordercancel_url to ordercancel_data,
+                orderconfirm_url to orderconfirm_data
+
             )
 
 

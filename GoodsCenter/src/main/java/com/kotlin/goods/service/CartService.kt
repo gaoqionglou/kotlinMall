@@ -15,5 +15,5 @@ interface CartService {
     ): Observable<Int>
 
     fun deleteCartList(list: List<Int>): Observable<Boolean>
-    fun submitCart(list: MutableList<CartGoods>, totalPrice: Long): Observable<String>
+    fun submitCart(list: MutableList<CartGoods>, totalPrice: Long): Observable<Int>
 }

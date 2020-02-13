@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
 import com.kennyc.view.MultiStateView
@@ -27,6 +28,8 @@ import com.kotlin.goods.injection.module.CartModule
 import com.kotlin.goods.presenter.CartPresenter
 import com.kotlin.goods.presenter.view.CartView
 import com.kotlin.goods.ui.adapter.CartGoodsAdapter
+import com.kotlin.provider.common.ProviderConstant
+import com.kotlin.provider.router.RouterPath
 import kotlinx.android.synthetic.main.fragment_cart.*
 
 class CartFragment : BaseMvpFragment<CartPresenter>(), CartView {
@@ -175,8 +178,11 @@ class CartFragment : BaseMvpFragment<CartPresenter>(), CartView {
         }
     }
 
-    override fun onSubmitCartListResult(result: String) {
+    override fun onSubmitCartListResult(result: Int) {
         Toast.makeText(activity, "单号：${result}", Toast.LENGTH_SHORT).show()
+        ARouter.getInstance().build(RouterPath.OrderCenter.PATH_ORDER_CONFIRM)
+            .withInt(ProviderConstant.KEY_ORDER_ID, result)
+            .navigation()
     }
 
     fun setBackVisible(isVisible: Boolean) {

@@ -11,7 +11,12 @@ import com.kotlin.base.ui.fragment.BaseFragment
 import com.kotlin.base.utils.AppPrefsUtils
 import com.kotlin.mall.R
 import com.kotlin.mall.ui.activity.SettingActivity
+import com.kotlin.order.common.OrderConstant
+import com.kotlin.order.common.OrderStatus
+import com.kotlin.order.ui.activity.OrderActivity
+import com.kotlin.order.ui.activity.ShipAddressActivity
 import com.kotlin.provider.common.ProviderConstant
+import com.kotlin.provider.common.afterLogin
 import com.kotlin.provider.common.isLogined
 import com.kotlin.usercenter.ui.activity.LoginActivity
 import com.kotlin.usercenter.ui.activity.UserInfoActivity
@@ -33,6 +38,30 @@ class MeFragment : BaseFragment(), View.OnClickListener {
                 startActivity(Intent(activity, SettingActivity::class.java))
             }
 
+            mAddressTv.id -> {
+                startActivity(Intent(activity, ShipAddressActivity::class.java))
+            }
+            mAllOrderTv.id -> {
+                afterLogin {
+                    startActivity(Intent(activity, OrderActivity::class.java))
+                }
+            }
+
+            mWaitConfirmOrderTv.id -> {
+                val intent = Intent(activity, OrderActivity::class.java)
+                intent.putExtra(OrderConstant.KEY_ORDER_STATUS, OrderStatus.ORDER_WAIT_CONFIRM)
+                startActivity(intent)
+            }
+            mWaitPayOrderTv.id -> {
+                val intent = Intent(activity, OrderActivity::class.java)
+                intent.putExtra(OrderConstant.KEY_ORDER_STATUS, OrderStatus.ORDER_WAIT_PAY)
+                startActivity(intent)
+            }
+            mCompleteOrderTv.id -> {
+                val intent = Intent(activity, OrderActivity::class.java)
+                intent.putExtra(OrderConstant.KEY_ORDER_STATUS, OrderStatus.ORDER_COMPLETED)
+                startActivity(intent)
+            }
         }
     }
 
@@ -50,6 +79,11 @@ class MeFragment : BaseFragment(), View.OnClickListener {
         mUserNameTv.onClick(this)
         mUserIconIv.onClick(this)
         mSettingTv.onClick(this)
+        mAddressTv.onClick(this)
+        mAllOrderTv.onClick(this)
+        mWaitPayOrderTv.onClick(this)
+        mWaitConfirmOrderTv.onClick(this)
+        mCompleteOrderTv.onClick(this)
     }
 
     /**

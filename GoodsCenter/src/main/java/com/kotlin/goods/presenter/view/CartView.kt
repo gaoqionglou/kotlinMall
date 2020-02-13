@@ -9,6 +9,6 @@ interface CartView : BaseView {
 
     fun onDeleteCartResult(result: Boolean)
 
-    fun onSubmitCartListResult(result: String)
+    fun onSubmitCartListResult(result: Int)
 
 }
