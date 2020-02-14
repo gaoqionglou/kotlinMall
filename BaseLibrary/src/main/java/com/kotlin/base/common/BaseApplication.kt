@@ -8,7 +8,7 @@ import com.kotlin.base.injection.component.AppComponent
 import com.kotlin.base.injection.component.DaggerAppComponent
 import com.kotlin.base.injection.module.AppModule
 
-class BaseApplication : Application() {
+open class BaseApplication : Application() {
     lateinit var appComponent: AppComponent
     override fun onCreate() {
         super.onCreate()

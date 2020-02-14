@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+
 kapt {
     arguments {
         arg("moduleName", project.getName())
@@ -21,6 +22,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+
+        }
+
+        manifestPlaceholders = [
+                JPUSH_APPKEY : "80cec64fb32c3c398078ae98", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
     }
 
     buildTypes {
@@ -42,6 +53,14 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     api project(path: ':provider')
 
+
+    //Dagger2
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
     //ARouter
     kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
+
+
+    api 'cn.jiguang.sdk:jpush:3.5.4'  // 此处以JPush 3.5.4 版本为例。
+    api 'cn.jiguang.sdk:jcore:+'  // 此处以JCore 2.2.8 版本为例。
+
 }

@@ -2,10 +2,13 @@ package com.kotlin.usercenter.ui.activity
 
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.kotlin.base.ext.enable
 import com.kotlin.base.ext.onClick
 import com.kotlin.base.ui.activity.BaseMvpActivity
+import com.kotlin.provider.PushProvider
+import com.kotlin.provider.router.RouterPath
 import com.kotlin.user.utils.UserPrefsUtils
 import com.kotlin.usercenter.R
 import com.kotlin.usercenter.data.protocol.UserInfo
@@ -21,6 +24,10 @@ import org.jetbrains.anko.toast
 @Route(path = "/userCenter/login")
 class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClickListener {
 
+
+    @Autowired(name = RouterPath.MessageCenter.PATH_MESSAGE_PUSH)
+    @JvmField
+    var mPushProvider: PushProvider? = null
 
     override fun initComponent() {
         DaggerUserComponent.builder().activityComponent(mActivityComponent).userModule(UserModule())
@@ -52,7 +59,11 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
     override fun onClick(p0: View?) {
         when (p0?.id) {
             mLoginBtn.id -> {
-                mPresenter.login(mMobileEt.text.toString(), mPwdEt.text.toString(), "")
+                mPresenter.login(
+                    mMobileEt.text.toString(),
+                    mPwdEt.text.toString(),
+                    mPushProvider?.getPushId() ?: ""
+                )
             }
             mHeaderBar.getRightTextView()?.id -> {
                 startActivity<RegisterActivity>()
