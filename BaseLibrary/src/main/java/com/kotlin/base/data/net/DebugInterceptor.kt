@@ -94,6 +94,13 @@ class DebugInterceptor(
         var orderconfirm_url: String = apphost + "order/confirm"
         val orderconfirm_data: Int = R.raw.orderconfirm_data
 
+        var getpaysign_url: String = apphost + "pay/getPaySign"
+        val getpaysign_data: Int = R.raw.getpaysign_data
+
+        var pay_url: String = apphost + "order/pay"
+        val pay_data: Int = R.raw.pay_data
+
+
         val debugMap =
             mapOf(
                 login_url to login_data,
@@ -117,7 +124,9 @@ class DebugInterceptor(
                 ordersubmitorder_url to ordersubmitorder_data,
                 ordergetorderlist_url to ordergetorderlist_data,
                 ordercancel_url to ordercancel_data,
-                orderconfirm_url to orderconfirm_data
+                orderconfirm_url to orderconfirm_data,
+                getpaysign_url to getpaysign_data,
+                pay_url to pay_data
 
             )
 

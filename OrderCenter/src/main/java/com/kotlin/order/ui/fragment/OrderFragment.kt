@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.bigkoo.alertview.AlertView
 import com.bigkoo.alertview.OnItemClickListener
 import com.kennyc.view.MultiStateView
@@ -23,6 +24,7 @@ import com.kotlin.order.presenter.view.OrderListView
 import com.kotlin.order.ui.activity.OrderDetailActivity
 import com.kotlin.order.ui.adapter.OrderAdapter
 import com.kotlin.provider.common.ProviderConstant
+import com.kotlin.provider.router.RouterPath
 import kotlinx.android.synthetic.main.fragment_order.*
 
 class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
@@ -41,10 +43,15 @@ class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
         return inflater.inflate(R.layout.fragment_order, container, false)
     }
 
+    override fun onStart() {
+        super.onStart()
+        loadData()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        loadData()
+//        loadData()
     }
 
     private fun initView() {
@@ -75,7 +82,11 @@ class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
                         mPresenter.confirmOrder(order.id)
                     }
                     OrderConstant.OPT_ORDER_PAY -> {
-                        Toast.makeText(activity, "OPT_ORDER_PAY", Toast.LENGTH_SHORT).show()
+
+                        ARouter.getInstance().build(RouterPath.PaySDK.PATH_PAY)
+                            .withInt(ProviderConstant.KEY_ORDER_ID, order.id)
+                            .withLong(ProviderConstant.KEY_ORDER_PRICE, order.totalPrice)
+                            .navigation()
                     }
                 }
             }
@@ -106,6 +117,7 @@ class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
     }
 
     override fun onConfirmOrderResult(orderId: Int, result: Boolean) {
+        Toast.makeText(activity, "确认收货成功", Toast.LENGTH_SHORT).show()
         if (result) {
             val data =
                 mAdapter.dataList.filter { it.id != orderId } as MutableList
@@ -114,6 +126,8 @@ class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
     }
 
     override fun onCancelOrderResult(orderId: Int, result: Boolean) {
+
+        Toast.makeText(activity, "取消订单成功", Toast.LENGTH_SHORT).show()
         if (result) {
             val data =
                 mAdapter.dataList.filter { it.id != orderId } as MutableList
